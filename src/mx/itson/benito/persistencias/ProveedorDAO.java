@@ -19,7 +19,7 @@ import org.hibernate.Session;
  * @author Xylan
  */
 public class ProveedorDAO {
-            public static List<Proveedor> obtenerTodos() {
+    public static List<Proveedor> obtenerTodos() {
             List<Proveedor> proveedores = new ArrayList<>();
         try {
             Session session = HibernateUtil.getSessionFactory().openSession();
@@ -33,7 +33,7 @@ public class ProveedorDAO {
         }
         return proveedores;
     }
-        public static boolean guardar(String nombre, String direccion, String telefono, String email, String contacto){
+    public static boolean guardar(String nombre, String direccion, String telefono, String email, String contacto){
         boolean resultado = false;
         try {
             Session session = HibernateUtil.getSessionFactory().openSession();
@@ -56,7 +56,7 @@ public class ProveedorDAO {
         }
         return resultado;
     }
-        public static Proveedor obtenerPorId(int idproveedor){
+    public static Proveedor obtenerPorId(int idproveedor){
         Proveedor proveedor = null;
         try {
             Session session = HibernateUtil.getSessionFactory().openSession();
@@ -66,7 +66,7 @@ public class ProveedorDAO {
         }
         return proveedor;
     }
-         public static boolean editar(int idproveedor, String nombre, String direccion, String telefono, String email, String contacto){
+    public static boolean editar(int idproveedor, String nombre, String direccion, String telefono, String email, String contacto){
         boolean resultado = false;
         try {
             Session session = HibernateUtil.getSessionFactory().openSession();
@@ -90,7 +90,7 @@ public class ProveedorDAO {
         }
         return resultado;
     }
-  public static boolean eliminar(int idproveedor){
+    public static boolean eliminar(int idproveedor){
         boolean resultado = false;
         try {
             Session session = HibernateUtil.getSessionFactory().openSession();
