@@ -53,13 +53,13 @@ public class ListaArticulo extends javax.swing.JFrame {
 
         tblArticulos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Id", "Nombre", "Precio", " Proveedor"
+                "Id", "Nombre", "Precio"
             }
         ));
         jScrollPane1.setViewportView(tblArticulos);

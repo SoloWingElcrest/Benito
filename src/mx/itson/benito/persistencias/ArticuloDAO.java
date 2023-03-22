@@ -34,7 +34,7 @@ public class ArticuloDAO {
         return articulos;
     }
 
-    public static boolean guardar(String nombre, double precio, Proveedor proveedor) {
+    public static boolean guardar(String nombre, double precio) {
         boolean resultado = false;
         try {
             Session session = HibernateUtil.getSessionFactory().openSession();
@@ -67,7 +67,7 @@ public class ArticuloDAO {
         return articulo;
     }
 
-    public static boolean editar(int idArticulo, String nombre, double precio, Proveedor proveedor) {
+    public static boolean editar(int idArticulo, String nombre, double precio) {
         boolean resultado = false;
         try {
             Session session = HibernateUtil.getSessionFactory().openSession();
