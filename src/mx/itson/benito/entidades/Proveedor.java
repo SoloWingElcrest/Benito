@@ -108,4 +108,7 @@ public class Proveedor {
     public void setContacto(String contacto) {
         this.contacto = contacto;
     }
+    public String toString(){
+        return this.nombre;
+    }
 }

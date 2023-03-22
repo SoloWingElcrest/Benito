@@ -34,32 +34,33 @@ public class ArticuloDAO {
         return articulos;
     }
 
-    public static boolean guardar(int idarticulo, String nombre, double precio, Proveedor proveedor) {
+    public static boolean guardar(String nombre, double precio, Proveedor proveedor) {
         boolean resultado = false;
         try {
             Session session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
 
-            Articulo c = new Articulo();
-            c.setNombre(nombre);
-            c.setPrecio(precio);
-            c.setProveedor(proveedor);
+            Articulo a = new Articulo();
+            a.setNombre(nombre);
+            a.setPrecio(precio);
+            a.setProveedor(proveedor);
 
-            session.save(c);
+            session.save(a);
 
             session.getTransaction().commit();
-
+            
+            resultado = a.getIdarticulo() != 0;
         } catch (Exception ex) {
             System.err.println("Ocurrio un error" + ex.getMessage());
         }
         return resultado;
     }
 
-    public static Articulo obtenerPorId(int id) {
+    public static Articulo obtenerPorId(int idArticulo) {
         Articulo articulo = null;
         try {
-            Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-            articulo = session.get(Articulo.class, id);
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            articulo = session.get(Articulo.class, idArticulo);
         } catch (HibernateException ex) {
             System.err.println("Ocurrio un error: " + ex.getMessage());
         }
@@ -69,7 +70,7 @@ public class ArticuloDAO {
     public static boolean editar(int idArticulo, String nombre, double precio, Proveedor proveedor) {
         boolean resultado = false;
         try {
-            Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+            Session session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
 
             Articulo articulo = obtenerPorId(idArticulo);
@@ -79,6 +80,7 @@ public class ArticuloDAO {
                 articulo.setProveedor(proveedor);
                 session.saveOrUpdate(articulo);
                 session.getTransaction().commit();
+                resultado = true;
 
             }
         } catch (HibernateException ex) {
@@ -87,22 +89,36 @@ public class ArticuloDAO {
         return resultado;
     }
 
-    public static boolean eliminar(int id) {
+    public static boolean eliminar(int idArticulo) {
+        boolean resultado = false;
         try {
-            Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+            Session session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
-
-            Articulo articulo = obtenerPorId(id);
-            if (articulo != null) {
+            
+            Articulo articulo = obtenerPorId(idArticulo);
+            
+            if(articulo != null){
                 session.delete(articulo);
+                HibernateUtil.getSessionFactory().openSession().delete(articulo);
                 session.getTransaction().commit();
+                resultado = true;
             }
         } catch (HibernateException ex) {
             System.err.println("Ocurrio un error: " + ex.getMessage());
         }
-        return false;
+        return resultado;
     }
+      public static double sumaPrecio(Articulo subtotal) {
+        double total = 0;
 
+        Articulo articulo = subtotal;
+            if(articulo != null){
+                articulo.setPrecio(total);
+            }
+                total += subtotal.getPrecio();
+            
+        return total;
+    }
 }
 
 
