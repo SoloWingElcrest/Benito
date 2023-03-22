@@ -24,9 +24,7 @@ public class Articulo {
     private int idArticulo;
     private String nombre;
     private double precio;
-   @OneToOne(cascade = CascadeType.ALL)
-   @JoinColumn(name = "Proveedor")
-    private Proveedor proveedor;
+
 
     /**
      * @return the idArticulo
@@ -70,18 +68,7 @@ public class Articulo {
         this.precio = precio;
     }
 
-    /**
-     * @return the proveedor
-     */
-    public Proveedor getProveedor() {
-        return proveedor;
+   public String toString(){
+        return this.nombre;
     }
-
-    /**
-     * @param proveedor the proveedor to set
-     */
-    public void setProveedor(Proveedor proveedor) {
-        this.proveedor = proveedor;
-    }
-
 }

@@ -211,7 +211,7 @@ public class ListaArticulo extends javax.swing.JFrame {
                 a.getIdarticulo(),
                 a.getNombre(),
                 a.getPrecio(),
-                a.getProveedor().getNombre()
+
             });
         }
     }

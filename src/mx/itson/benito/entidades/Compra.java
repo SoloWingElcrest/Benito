@@ -23,12 +23,13 @@ public class Compra {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
    private int idcompra;
    @OneToOne(cascade = CascadeType.ALL)
-   @JoinColumn(name = "Proveedor")
+   @JoinColumn(name = "proveedor")
    private Proveedor proveedor;
    private String folio;
    @OneToOne(cascade = CascadeType.ALL)
-   @JoinColumn(name = "Articulo")
+   @JoinColumn(name = "articulo")
    private Articulo articulo;
+   private int cantidad;
 
     /**
      * @return the idcompra
@@ -85,5 +86,19 @@ public class Compra {
      */
     public void setArticulo(Articulo articulo) {
         this.articulo = articulo;
+    }
+
+    /**
+     * @return the cantidad
+     */
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    /**
+     * @param cantidad the cantidad to set
+     */
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 }

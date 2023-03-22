@@ -43,7 +43,7 @@ public class ArticuloDAO {
             Articulo a = new Articulo();
             a.setNombre(nombre);
             a.setPrecio(precio);
-            a.setProveedor(proveedor);
+
 
             session.save(a);
 
@@ -77,7 +77,7 @@ public class ArticuloDAO {
             if (articulo != null) {
                 articulo.setNombre(nombre);
                 articulo.setPrecio(precio);
-                articulo.setProveedor(proveedor);
+       
                 session.saveOrUpdate(articulo);
                 session.getTransaction().commit();
                 resultado = true;
