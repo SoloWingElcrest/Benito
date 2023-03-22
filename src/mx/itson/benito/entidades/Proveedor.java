@@ -11,7 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- *
+ * Entidad de Proveedor
  * @author Xylan
  */
 @Entity

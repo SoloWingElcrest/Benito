@@ -14,7 +14,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 /**
- *
+ * Entidad de Compra
  * @author Xylan
  */
 @Entity

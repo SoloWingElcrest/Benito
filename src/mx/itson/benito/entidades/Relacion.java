@@ -17,7 +17,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 
 /**
- *
+ * Entidad de Relacion
  * @author Xylan
  */
 @Entity

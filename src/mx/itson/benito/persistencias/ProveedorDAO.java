@@ -15,10 +15,14 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 
 /**
- *
+ *Clase de persistencia para la obtencion de datos de proveedores de la base de datos
  * @author Xylan
  */
 public class ProveedorDAO {
+    /**
+     * Genera una lista de proveedores para su despliegue en la interfaz
+     * @return la lista proveedores
+     */
     public static List<Proveedor> obtenerTodos() {
             List<Proveedor> proveedores = new ArrayList<>();
         try {
@@ -33,6 +37,15 @@ public class ProveedorDAO {
         }
         return proveedores;
     }
+    /**
+     * Funcion guardar que permite almacenar la informacion de datos 
+     * @param nombre nombre del proveedor
+     * @param direccion direccion de la ubicacion del proveedor
+     * @param telefono telefono de contacto del proveedor
+     * @param email e-mail de contacto del proveedor
+     * @param contacto nombre de contacto del proveedor
+     * @return el resultado de la funcion guardar
+     */
     public static boolean guardar(String nombre, String direccion, String telefono, String email, String contacto){
         boolean resultado = false;
         try {
@@ -56,6 +69,11 @@ public class ProveedorDAO {
         }
         return resultado;
     }
+    /**
+     * Obtiene los datos ordenados por medio del id
+     * @param idproveedor identificador del proveedor
+     * @return las proveedores obtenidos
+     */
     public static Proveedor obtenerPorId(int idproveedor){
         Proveedor proveedor = null;
         try {
@@ -66,6 +84,16 @@ public class ProveedorDAO {
         }
         return proveedor;
     }
+    /**
+     * Funcion para editar una lista de datos ya almacenada en la base de datos
+     * @param idproveedor identificador del proveedor
+     * @param nombre nombre del proveedor
+     * @param direccion direccion de la ubicacion del proveedor
+     * @param telefono telefono de contacto del proveedor
+     * @param email e-mail de contacto del proveedor
+     * @param contacto nombre de contacto del proveedor
+     * @return el resultado de la funcion de edicion 
+     */
     public static boolean editar(int idproveedor, String nombre, String direccion, String telefono, String email, String contacto){
         boolean resultado = false;
         try {
@@ -90,6 +118,11 @@ public class ProveedorDAO {
         }
         return resultado;
     }
+    /**
+     * Funcion que elimina una serie de datos de proveedores de la base de datos
+     * @param idproveedor identificador de proveedor
+     * @return el resultado de la funcion de eliminacion de datos
+     */
     public static boolean eliminar(int idproveedor){
         boolean resultado = false;
         try {

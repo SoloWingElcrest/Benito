@@ -5,16 +5,13 @@
  */
 package mx.itson.benito.entidades;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 
 /**
- *
+ * Entidad de Articulo
  * @author Xylan
  */
 @Entity
@@ -34,7 +31,7 @@ public class Articulo {
     }
 
     /**
-     * @param idarticulo the idarticulo to set
+     * @param idArticulo the idarticulo to set
      */
     public void setIdArticulo(int idArticulo) {
         this.idArticulo = idArticulo;

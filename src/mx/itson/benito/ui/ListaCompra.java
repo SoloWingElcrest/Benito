@@ -14,7 +14,7 @@ import mx.itson.benito.entidades.Proveedor;
 import mx.itson.benito.persistencias.CompraDAO;
 
 /**
- *
+ * Lista que despliega los compras de la base de datos en una tabla
  * @author Xylan
  */
 public class ListaCompra extends javax.swing.JFrame {
@@ -188,7 +188,7 @@ public class ListaCompra extends javax.swing.JFrame {
         // TODO add your handling code here:
         int renglon = tblCompra.getSelectedRow();
         int id = Integer.parseInt(tblCompra.getModel().getValueAt(renglon, 0).toString());
-
+       
         CompraDAO.eliminar(id);
         cargar();
     }//GEN-LAST:event_btnEliminarActionPerformed

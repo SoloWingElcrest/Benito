@@ -15,16 +15,17 @@ import mx.itson.benito.persistencias.CompraDAO;
 import mx.itson.benito.persistencias.ProveedorDAO;
 
 /**
- *
+ * Formulario de compra para la operacion basica de la lista de compras
  * @author Xylan
  */
 public class FormularioCompra extends javax.swing.JFrame {
     
     int idcompra = 0;
-
+    
     public FormularioCompra(java.awt.Frame parent, boolean modal, int id) {
-        
         initComponents();
+        this.idcompra = idcompra;
+        
         if (id != 0) {
             Compra compra = new Compra();
 

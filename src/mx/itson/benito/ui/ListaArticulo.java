@@ -11,7 +11,7 @@ import mx.itson.benito.entidades.Articulo;
 import mx.itson.benito.persistencias.ArticuloDAO;
 
 /**
- *
+ * Lista que despliega los articulos de la base de datos en una tabla
  * @author Xylan
  */
 public class ListaArticulo extends javax.swing.JFrame {

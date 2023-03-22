@@ -12,13 +12,13 @@ import mx.itson.benito.persistencias.ProveedorDAO;
 
 
 /**
- *
+ * Formulario de proveedores para la operacion basica de la lista de proveedores
  * @author Xylan
  */
 public class FormularioProveedor extends javax.swing.JFrame {
     
     int idProveedor = 0;
-
+    
     public FormularioProveedor(java.awt.Frame parent, boolean modal, int idProveedor) {
         
         initComponents();

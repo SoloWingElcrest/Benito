@@ -6,7 +6,7 @@
 package mx.itson.benito.ui;
 
 /**
- *
+ * Interfaz inicial para iniciar los distintas tablas
  * @author Xylan
  */
 public class Main extends javax.swing.JFrame {

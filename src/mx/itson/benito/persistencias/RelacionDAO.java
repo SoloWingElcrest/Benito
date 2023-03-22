@@ -13,10 +13,14 @@ import mx.itson.benito.utilerias.HibernateUtil;
 import org.hibernate.Session;
 
 /**
- *
+ * Clase de apoyo que relaciona las clases proveedor y articulo
  * @author Xylan
  */
 public class RelacionDAO {
+        /**
+         * Genera la lista que relaciona las clases
+         * @return la lista de relaciones
+         */
         public static List<Relacion> obtenerTodos(){
         List<Relacion> relacion = new ArrayList<>();
         try {

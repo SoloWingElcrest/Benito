@@ -11,7 +11,7 @@ import mx.itson.benito.entidades.Proveedor;
 import mx.itson.benito.persistencias.ProveedorDAO;
 
 /**
- *
+ * Lista que despliega los proveedores de la base de datos en una tabla
  * @author Xylan
  */
 public class ListaProveedor extends javax.swing.JFrame {

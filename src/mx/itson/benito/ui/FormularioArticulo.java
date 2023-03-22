@@ -13,16 +13,13 @@ import mx.itson.benito.persistencias.ArticuloDAO;
 import mx.itson.benito.persistencias.ProveedorDAO;
 
 /**
- *
+ * Formulario de articulos para la operacion basica de la lista de articulos
  * @author Xylan
  */
 public class FormularioArticulo extends javax.swing.JFrame {
 
     int idArticulo = 0;
     
-    /**
-     * Creates new form ArticuloFormulario
-     */
     public FormularioArticulo(java.awt.Frame parent, boolean modal, int idArticulo) {
         initComponents();
         this.idArticulo = idArticulo;
