@@ -75,7 +75,7 @@
                 <Column editable="true" title="Id" type="java.lang.Object"/>
                 <Column editable="true" title="Nombre" type="java.lang.Object"/>
                 <Column editable="true" title="Precio" type="java.lang.Object"/>
-                <Column editable="true" title="ID Proveedor" type="java.lang.Object"/>
+                <Column editable="true" title=" Proveedor" type="java.lang.Object"/>
               </Table>
             </Property>
           </Properties>

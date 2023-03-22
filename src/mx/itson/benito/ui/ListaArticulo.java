@@ -53,7 +53,7 @@ public class ListaArticulo extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Id", "Nombre", "Precio", "ID Proveedor"
+                "Id", "Nombre", "Precio", " Proveedor"
             }
         ));
         jScrollPane1.setViewportView(tblArticulos);
